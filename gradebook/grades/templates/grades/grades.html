@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grades</title>
+        <link rel="stylesheet" href="static/styles.css">
+    </head>
+    <div class="header">
+        <h1>Gradebook</h1>
+        <p>Student Grades</p>
+      </div> 
+
+    <body>
+        {% for post in posts%}
+            <h1>{{ post.Name }}</h1>
+            <p> Grade: {{ post.grade }} </p>
+            <p> {{ post.date_posted }} </p>
+        {% endfor %}
+    </body>
+</html>
