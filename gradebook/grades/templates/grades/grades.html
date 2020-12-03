@@ -7,11 +7,23 @@
     <div class="header">
         <h1>Gradebook</h1>
         <p>Student Grades</p>
-      </div> 
+      
+    </div> 
 
     <body>
+
+        <form method = "post">
+            <o>Name:</o>
+            <input type='text'>
+            <o>Grade:</o>
+            <input type='text'>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
         {% for post in posts%}
-            <h1>{{ post.Name }}</h1>
+            <h1>{{ post.name }}</h1>
             <p> Grade: {{ post.grade }} </p>
             <p> {{ post.date_posted }} </p>
         {% endfor %}

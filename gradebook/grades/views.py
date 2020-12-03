@@ -1,27 +1,18 @@
 from django.http import HttpResponse
 from django.template import Context, loader
 from django.shortcuts import render
+from .models import Post
 
 
-posts = [
-    {
-        'Name' : 'Aaron Coccagna',
-        'grade' : 'A+',
-        'date_posted' : 'November 20th 2020'
-    },
 
-    {
-        'Name' : 'John Smith',
-        'grade' : 'B+',
-        'date_posted' : 'November 20th 2020'
-    }
-
-
-]
 
 def index(request):
+    
+    
+    
+    
     context = {
-        'posts' : posts
+        'posts' : Post.objects.all()
     }
     return render(request, "grades/grades.html", context)
 
